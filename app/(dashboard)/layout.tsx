@@ -1,5 +1,4 @@
 import Header from "@/components/header";
-import { QueryProvider } from "@/providers/query-provider";
 import React from "react";
 
 type Props = {
@@ -10,9 +9,7 @@ const DashboardLayout = ({ children }: Props) => {
   return (
     <div>
       <Header />
-      <main className="px-3 lg:px-14">
-        <QueryProvider>{children}</QueryProvider>
-      </main>
+      <main className="px-3 lg:px-14">{children}</main>
     </div>
   );
 };
